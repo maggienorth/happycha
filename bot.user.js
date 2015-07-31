@@ -746,9 +746,9 @@ console.log("Running rednelss Bot!");
 
                         var enemyDistance = computeDistance(allPossibleThreats[i].x, allPossibleThreats[i].y, player[k].x, player[k].y);
 
-                        var splitDangerDistance = allPossibleThreats[i].size + splitDistance + 850;
+                        var splitDangerDistance = allPossibleThreats[i].size + splitDistance + 100;
 
-                        var normalDangerDistance = allPossibleThreats[i].size + 850;
+                        var normalDangerDistance = allPossibleThreats[i].size + 100;
 
                         var shiftDistance = player[k].size;
 
