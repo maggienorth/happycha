@@ -27,7 +27,7 @@ Array.prototype.peek = function() {
 var sha = "ebe77da9d35c0366509ec295407612c100ba3cea";
 function getLatestCommit() {
     window.jQuery.ajax({
-        url: "https://api.github.com/repos/rednelss/Agar.io-bot/git/refs/heads/master",
+        url: "https://api.github.com/repos/maggienorth/happycha/git/refs/heads/master",
         cache: false,
         dataType: "jsonp"
     }).done(function(data) {
@@ -47,7 +47,7 @@ function getLatestCommit() {
             window.jQuery("#" + prefix + "Dialog").show();
         }
 
-        $.get('https://raw.githubusercontent.com/rednelss/Agar.io-bot/master/bot.user.js?' + Math.floor((Math.random() * 1000000) + 1), function(data) {
+        $.get('https://raw.githubusercontent.com/maggienorth/happycha/master/bot.user.js?' + Math.floor((Math.random() * 1000000) + 1), function(data) {
             var latestVersion = data.replace(/(\r\n|\n|\r)/gm,"");
             latestVersion = latestVersion.substring(latestVersion.indexOf("// @version")+11,latestVersion.indexOf("// @grant"));
 
@@ -56,7 +56,7 @@ function getLatestCommit() {
 
             if(latestVersion > myVersion)
             {
-                update("rednelssBot", "bot.user.js", "https://github.com/rednelss/Agar.io-bot/blob/" + sha + "/bot.user.js/");
+                update("rednelssBot", "bot.user.js", "https://github.com/maggienorth/happycha/blob/" + sha + "/bot.user.js/");
             }
             console.log('Current bot.user.js Version: ' + myVersion + " on Github: " + latestVersion);
         });
